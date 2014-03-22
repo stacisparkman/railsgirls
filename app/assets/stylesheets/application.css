@@ -15,3 +15,14 @@ body { padding-top: 60px; }
 footer { margin-top: 100px; }
 table, td, th { vertical-align: middle; border: none; }
 th { border-bottom: 1px solid #DDD; }
+
+.gravatar { height: 25px; margin: 0 10px; }
+
+.navbar { min-height: 38px; background: #D8DFF05; }
+
+.navbar a.brand { font-size: 18px; } .navbar a.brand:hover { color: #fff; background: transparent; text-decoration: none; }
+
+.form-width { width: 500px; }
+#idea_description { height: 300px; }
+
+.form-top-margin { margin-top: 20px; }

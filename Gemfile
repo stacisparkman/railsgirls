@@ -8,6 +8,7 @@ gem 'sqlite3'
 gem 'carrierwave'
 gem 'mini_magick', '3.5.0'
 gem 'devise'
+gem 'gravtastic'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

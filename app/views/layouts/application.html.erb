@@ -13,12 +13,15 @@
   <div class="container">
     <div class="navbar-header">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/ideas">Ideas</a></li>
-        <li ><%= link_to 'New Idea', new_idea_path %></li>
+        <li <% if controller.action_name == "index" %>class="active"<% end %>><a href="/ideas">Ideas</a></li>
+        <li <% if controller.action_name == "new" %>class="active"<% end %>><%= link_to 'New Idea', new_idea_path %></li>
+        <li <% if controller.action_name == "info" %>class="active"<% end %>><%= link_to 'About', pages_info_path %></li>
       </ul>
       <p class="navbar-text pull-right">
         <% if user_signed_in? %>
-          Logged in as <strong><%= current_user.email %></strong>.
+          Logged in as 
+        <%= image_tag current_user.gravatar_url, class: "gravatar" %>
+          <strong><%= current_user.email %></strong>.
           <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
           <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
         <% else %>
