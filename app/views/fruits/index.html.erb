@@ -1,0 +1,33 @@
+<h1>Listing fruits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Shape</th>
+      <th>Description</th>
+      <th>Season</th>
+      <th>Rank</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fruits.each do |fruit| %>
+      <tr>
+        <td><%= fruit.shape %></td>
+        <td><%= fruit.description %></td>
+        <td><%= fruit.season %></td>
+        <td><%= fruit.rank %></td>
+        <td><%= link_to 'Show', fruit %></td>
+        <td><%= link_to 'Edit', edit_fruit_path(fruit) %></td>
+        <td><%= link_to 'Destroy', fruit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fruit', new_fruit_path %>

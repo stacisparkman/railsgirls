@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Shape:</strong>
+  <%= @fruit.shape %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @fruit.description %>
+</p>
+
+<p>
+  <strong>Season:</strong>
+  <%= @fruit.season %>
+</p>
+
+<p>
+  <strong>Rank:</strong>
+  <%= @fruit.rank %>
+</p>
+
+<%= link_to 'Edit', edit_fruit_path(@fruit) %> |
+<%= link_to 'Back', fruits_path %>
